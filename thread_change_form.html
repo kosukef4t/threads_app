@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>掲示板</title>
+    <style>
+        header{
+            width: 100%;
+            background-color: #f0f0f0;
+            display: flex;
+        }
+        .wrapper{
+            margin: 0 auto;
+            font-family:serif;
+        }
+        .wrapper h2{
+            margin-bottom: 20px;
+        }
+        .wrapper li{
+            margin-bottom: 10px;
+            list-style: none;
+        }
+        .back{
+            margin-top:20px;
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <h2>新しいスレッドを作成</h2>
+            <form action="thread_change.php" method="post">
+                <li><label for="title">タイトル:</label>
+                <input type="text" name="title"></li>
+                <li><label for="new_name">作成者名:</label>
+                <input type="text" name="new_name"></li>
+                <li><label for="is_create">作成</label>
+                <input type="checkbox" name="is_create"></li>
+                <li><button type="submit">送信</button></li>
+            </form>
+            <a class="back" href="thread.php">スレッド一覧に戻る</a>
+        </div>
+        <div class="wrapper">
+            <h2>スレッドの内容を変更 or 削除</h2>
+            <form action="thread_change.php" method="post">
+                <li><label for="original_title">元のタイトル</label>
+                <input type="text" name="original_title"></li>
+                <li><label for="new_title">新しいタイトル:</label>
+                <input type="text" name="new_title"></li>
+                <li><label for="change_name">変更者名:</label>
+                <input type="text" name="change_name"></li>
+                <li><label type="checkbox">変更</label>
+                <input type="checkbox" name="is_update">
+                <label type="checkbox">削除</label>
+                <input type="checkbox" name="is_delete"></li>
+                <li><button type="submit">送信</button></li>
+            </form>
+        </div>
+</header>
+</body>
+</html>

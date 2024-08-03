@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新規登録ページ</title>
+    <style>
+        body{
+            font:15px serif;
+        }
+        .wrapper{
+            width: 400px;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        .form-item{
+            padding: 5px 0;
+        }
+        .form{
+            size: 10;
+        }
+        .submit{
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "wrapper">
+        <h2>ログインページ</h2>
+        <p>名前、アドレス、パスワードを入力してください！</p>
+        <form action="login.php" method="post">
+            <div class = "form-item">
+                <label>Email address</label><br>
+                <input class="form" type="text" name="email" required>
+            </div>    
+            <div class = "form-item">
+                <label>Password</label><br>
+                <input class="form" type="text" name="password" required>
+            </div>
+            <input class ="submit" type="submit" value="ログイン">
+        </form>
+    </div>    
+</body>
+</html>
